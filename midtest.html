@@ -1,0 +1,121 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>訓練反應</title>
+</head>
+<style>
+    img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    p {
+        font-size: 40px;
+    }
+
+    body {
+        background-color: #FFFF66;
+    }
+
+    span {
+        font-size: 40px;
+    }
+
+    tr {
+        background-color: #1100ff;
+        width: 100px;
+        float: right;
+    }
+
+    div {
+        background-color: #FFFFCC;
+        height: 700px;
+        width: 1000px;
+        float: left;
+    }
+</style>
+
+<body>
+    <div id="content">
+        <img src="https://img.51miz.com/Element/00/33/38/07/35e50e81_E333807_48d9a365.png" id=m width="80" height="80"
+            onclick="countscore()">
+    </div>
+    <tr>
+        <td>
+            <b>遊戲說明:</b>
+            <br>在限定的時間內點擊圖片
+        </td>
+    </tr>
+    <button onclick="button1_click()" style="width:120px;height:40px;font-size:20px;" id=button_1>開始</button>
+    <button onclick="button2_click()" style="width:120px;height:40px;font-size:20px;" id=button_2>結束</button>
+    <p id=scoretext>總分:</p>
+    <span id="Check_Text" style="color:red">剩餘時間：<span id="Check_time">30秒</span></span>
+
+    <script>
+        var picturetime;
+        var timer;
+        var Check_time;
+        var mm;
+        var x = 0;
+        var y = 0;
+        var count = 0;
+        var c = document.getElementById("m");
+        var Settime = 30;
+        function time_out() {
+            Settime -= 1;
+            Check_time = document.getElementById("Check_time");
+            Check_time.innerHTML = Settime + "秒";
+            if (Settime == 0) {
+                jump();
+
+            }
+        }
+
+
+        function jump() {
+            var r = confirm("你的速度為" + picturetime + "你的分數是:" + count + "分,是否重新開始");
+            if (r == true) {
+                button2_click();
+                button1_click();
+            }
+            else {
+                button2_click();
+            }
+        }
+        function countscore() {
+            count = count + 1;
+            document.getElementById("scoretext").innerHTML = "總分:" + count;
+        }
+        function button1_click() {
+
+            picturetime = prompt("請輸入圖片速度(毫秒/變換位置)", "1000");
+            if (picturetime != null && picturetime != "" && !isNaN(picturetime)) {
+                timer = setInterval(function () { mouse() }, picturetime);
+                mm = setInterval(function () { time_out() }, 1000);
+            }
+            else {
+                alert("請輸入數字");
+            }
+        }
+        function button2_click() {
+            clearInterval(timer);
+            clearInterval(mm);
+            c.style.top = 0;
+            c.style.left = 0;
+            count = 0;
+            Settime = 30;
+            document.getElementById("scoretext").innerHTML = "點擊次數:0";
+            document.getElementById("Check_time").innerText = "30秒";
+        }
+        function mouse() {
+            x = parseInt(Math.random() * 900);
+            y = parseInt(Math.random() * 600);
+            c.style.top = y;
+            c.style.left = x;
+        }
+    </script>
+</body>
+
+</html>
