@@ -22,3 +22,16 @@
 
 部分css內圖片在架起來時候會消失,應該是templateMo引用的必須放在同層,但flask必須要另外放在static的資料夾
 
+## 參考連結:
+
+Python使用Gmail:https://yc-note.com/python/python-gmail/
+
+Flask get post使用方法:https://medium.com/seaniap/python-web-flask-get-post%E5%82%B3%E9%80%81%E8%B3%87%E6%96%99-2826aeeb0e28
+
+python 爬蟲(使用教材書):https://www.tenlong.com.tw/products/9789865025533
+
+皆為查詢使用方法,程式碼為原創
+
+
+
+
