@@ -8,6 +8,14 @@
 
 [操作影片](https://drive.google.com/file/d/1Xw8D1BdoozIJH6Z9tf4L0VHDwk_28rAd/view?usp=sharing)
 
+### 網站功能:
+
+可以搜尋各地區營業中且依人氣排名為順序的美食推薦
+
+可以搜尋各種電影的評價
+
+可以將搜尋的結果寄到使用者輸入的gmail內進行儲存行程
+
 ### 問題總結:
 
 有試著利用heroku架設,但資料庫問題失敗了
