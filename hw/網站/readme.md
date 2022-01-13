@@ -2,7 +2,7 @@
 
 ## 遊戲程式為以前的[專案](https://github.com/zhengyucen/wp109b/blob/main/finaltest.md )
 
-### 前端html為使用[templateMo](https://templatemo.com/about)的免費模板,後端為原創 
+### 前端html為使用[templateMo](https://templatemo.com/about)的免費模板改編的,後端為原創 
 
 [程式碼](https://github.com/zhengyucen/ws110a/tree/master/hw/%E7%B6%B2%E7%AB%99)
 
