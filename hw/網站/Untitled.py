@@ -222,7 +222,7 @@ def emailchecker():
     msgg["Subject"]="搜尋結果"
     msgg.set_content("搜尋結果:'"+ck+"'")
     server=smtplib.SMTP_SSL("smtp.gmail.com",465)
-    server.login("zxc110810@gmail.com","lol667865")
+    server.login("zxc110810@gmail.com","your password")
     server.send_message(msgg)
     server.close()
     sqlstr ="DELETE FROM data"
